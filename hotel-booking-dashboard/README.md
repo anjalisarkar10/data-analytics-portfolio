@@ -75,5 +75,8 @@ While creating the mapping, I found 3 records with the country code TMP, which i
 
 
 ## Dashboard Preview
+### Booking Analysis Dashboard
+<img width="7834" height="5345" alt="Picture4" src="https://github.com/user-attachments/assets/98186c85-2896-43a4-9dfd-f9a91ae7d2e1" />
 
-(Add screenshots here)
+### Customer Insight Dashboard
+<img width="10252" height="5405" alt="Picture3" src="https://github.com/user-attachments/assets/80ec5d8a-5672-4868-be7f-c562892dd378" />
