@@ -1,12 +1,14 @@
 # Data Analytics Portfolio
 
-Hi, I'm Anjali Sarkar, an M.Sc. Mathematics graduate with an interest in data analytics and business intelligence. This repository contains the projects I have built using tools such as Excel, SQL, and Tableau.
+Hi, I'm Anjali Sarkar, an M.Sc. Mathematics graduate with an interest in data analytics and business intelligence. This repository contains the projects I have built using tools such as Excel, SQL, Power BI and Tableau.
 
 ## Skills
 
 * Excel
 * SQL
 * Tableau
+* Power BI
+* Power Query
 * Data Cleaning
 * Data Analysis
 * Data Visualization
@@ -14,7 +16,7 @@ Hi, I'm Anjali Sarkar, an M.Sc. Mathematics graduate with an interest in data an
 
 ## Projects
 
-### 1. [![Hotel Booking Analysis Dashboard (Excel)](./hotel-booking-dashboard/images/booking_analysis.png)](./hotel-booking-dashboard/)
+### 1. [Hotel Booking Analysis Dashboard (Excel)](./hotel-booking-dashboard/)
 
 An interactive Excel dashboard built using the Hotel Booking Demand dataset. The project analyzes booking trends, cancellations, revenue, customer behavior, and hotel performance.
 
@@ -26,6 +28,22 @@ An interactive Excel dashboard built using the Hotel Booking Demand dataset. The
 * Customer and booking insights
 
 **Tools:** Excel, Pivot Tables, Pivot Charts, Slicers
+
+### 2. [Telco Customer Churn Analysis (MySQL + Power BI)](./telco-customer-churn-analysis)
+
+
+
+Analyzed customer churn data for a telecom company to identify the factors driving customer attrition and uncover opportunities for improving retention. The project involved SQL-based data cleaning and validation, data modeling, and the development of an interactive Power BI dashboard.
+
+### Highlights
+
+* Imported and validated data from five related tables.
+* Cleaned and standardized data using SQL.
+* Built a relational data model for analysis.
+* Created a multi-page Power BI dashboard covering churn trends, customer behavior, and retention strategies.
+
+**Tools:** MySQL, Power BI
+
 
 ## About Me
 
