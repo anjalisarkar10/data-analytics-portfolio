@@ -16,7 +16,7 @@ Hi, I'm Anjali Sarkar, an M.Sc. Mathematics graduate with an interest in data an
 
 ## Projects
 
-### 1. [Hotel Booking Analysis Dashboard (Excel)](./hotel-booking-dashboard/)
+### 1. [Hotel Booking Analysis Dashboard (Excel)](./hotel-booking-dashboard/README.md)
 
 An interactive Excel dashboard built using the Hotel Booking Demand dataset. The project analyzes booking trends, cancellations, revenue, customer behavior, and hotel performance.
 
@@ -29,7 +29,7 @@ An interactive Excel dashboard built using the Hotel Booking Demand dataset. The
 
 **Tools:** Excel, Pivot Tables, Pivot Charts, Slicers
 
-### 2. [Telco Customer Churn Analysis (MySQL + Power BI)](./telco-customer-churn-analysis)
+### 2. [Telco Customer Churn Analysis (MySQL + Power BI)](./telco-customer-churn-analysis/README.md)
 
 
 
@@ -44,6 +44,18 @@ Analyzed customer churn data for a telecom company to identify the factors drivi
 
 **Tools:** MySQL, Power BI
 
+### 3. [TheLook Ecommerce Sales & Customer Analytics (Google BigQuery + Tableau Public)](./thelook-ecommerce-analysis/README.md)
+
+Analyzed ecommerce sales, customer behavior, product performance, and geographic trends using Google's public TheLook Ecommerce dataset. SQL was used to answer business questions across customer, sales, product, and geographic domains, while Tableau was used to create an interactive dashboard for stakeholder reporting.
+
+### Highlights
+
+* Analyzed 124K orders from 100K customers
+* Tracked month-over-month revenue growth trends
+* Evaluated product category performance and profitability
+* Built an interactive Tableau dashboard to communicate business insights
+
+**Tools:** Google BigQuery, SQL, Tableau Public
 
 ## About Me
 
