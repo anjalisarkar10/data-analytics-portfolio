@@ -9,13 +9,14 @@
 -- Q1. Top Spending Customers
 
 SELECT
+  u.id,
   u.first_name,
   u.last_name,
-  SUM(oi.sale_price) AS spend
+  ROUND(SUM(oi.sale_price), 2) AS spend
 FROM `bigquery-public-data.thelook_ecommerce.users` AS u
 JOIN `bigquery-public-data.thelook_ecommerce.order_items` AS oi
   ON u.id = oi.user_id
-GROUP BY u.first_name, u.last_name
+GROUP BY 1,2,3
 ORDER BY spend DESC
 LIMIT 10;
 
@@ -36,13 +37,9 @@ GROUP BY age_group;
 
 -- Q3. Customers who placed more than one order.
 
-SELECT
-  COUNT(*) AS customers
-FROM
-  (
-    SELECT
-      user_id
-    FROM `bigquery-public-data.thelook_ecommerce.order_items`
-    GROUP BY user_id
-    HAVING COUNT(DISTINCT user_id) > 1
-  );
+SELECT user_id,
+       COUNT(order_id) AS total_orders,
+FROM `bigquery-public-data.thelook_ecommerce.orders`
+GROUP BY user_id
+HAVING COUNT(order_id) > 1
+ORDER BY total_orders DESC;
