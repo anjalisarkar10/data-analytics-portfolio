@@ -8,12 +8,13 @@
 -- Q1. Top 10 Products
 
 SELECT
+  p.id,
   p.name,
   SUM(oi.sale_price) AS revenue
 FROM `bigquery-public-data.thelook_ecommerce.products` AS p
 JOIN `bigquery-public-data.thelook_ecommerce.order_items` AS oi
   ON p.id = oi.product_id
-GROUP BY name
+GROUP BY p.id, p.name
 ORDER BY revenue DESC
 LIMIT 10;
 
@@ -33,12 +34,13 @@ GROUP BY p.category;
 -- Q3. Highest Profit Products
 
 SELECT
-  name,
-  SUM(oi.sale_price-p.cost) AS profit
+  p.id,
+  p.name,
+  ROUND(SUM(oi.sale_price-p.cost), 2) AS profit
 FROM `bigquery-public-data.thelook_ecommerce.products` AS p
 JOIN `bigquery-public-data.thelook_ecommerce.order_items` AS oi
   ON p.id = oi.product_id
-GROUP BY name
+GROUP BY 1, 2
 ORDER BY profit DESC;
 
 -- Q4. Find products priced above the average product price
