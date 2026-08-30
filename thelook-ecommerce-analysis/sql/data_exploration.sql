@@ -2,7 +2,7 @@
 --  E-COMMERCE SALES ANALYSIS USING SQL
 --  Dataset : bigquery-public-data.thelook_ecommerce
 -- ----------------------------------------------------------
---                  DATA CLEANING
+--                  DATA EXPLORATION
 -- ==========================================================
 
 -- ----------------------------------------------------------
