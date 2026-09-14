@@ -21,90 +21,19 @@ The dataset contains information on:
 
 The analysis focuses on sales performance, customer purchasing patterns, product profitability, and regional revenue distribution.
 
-**Last Updated:** 21 July 2026
-
----
-
-## Tools Used
-
-* Google BigQuery
-* SQL
-* Tableau Public
-
----
-
-## Project Workflow
-
-### 1. Data Exploration
-
-Explored and joined multiple tables from the dataset to understand relationships between customers, orders, products, and geographic locations.
-
-### 2. SQL Analysis
-
-Business questions were answered through SQL queries organized into separate analysis files:
-
-* [data_exploration.sql](./sql/data_exploration.sql)
-* [combined_kpi_query.sql](./sql/combined_kpi_query.sql)
-* [sales_analysis.sql](./sql/sales_analysis.sql)
-* [customer_analysis.sql](./sql/customer_analysis.sql)
-* [product_analysis.sql](./sql/product_analysis.sql)
-* [geographic_analysis.sql](./sql/geographic_analysis.sql)
-
-### 3. Dashboard Development
-
-The SQL outputs were visualized in Tableau Public to create an interactive dashboard focused on:
-
-* Business KPIs
-* Revenue Trends
-* Customer Demographics
-* Product Performance
-* Geographic Performance
+Tools Used: Google BigQuery, SQL, Tableau Public
 
 ---
 
 ## Analysis Performed
 
-### KPI Analysis
+### [Data Exploration](./sql/data_exploration.sql)
+
+I reviewed the dataset for missing values, duplicate primary keys, unusual age entries, pricing inconsistencies, order status distribution, and table relationships. No significant data quality issues were identified, and the data was suitable for sales, customer, and product analysis. Users were distributed across 14 countries. During the review, I found a few cases where country names were recorded in both English and local formats, such as Spain/España (1 user) and Germany/Deutschland (4 users).
+
+### [KPI Analysis](./sql/combined_kpi_query.sql)
 
 Calculated core business metrics:
-
-* Total Revenue
-* Total Orders
-* Total Customers
-* Average Order Value (AOV)
-* Total Profit
-* Overall Profit Margin
-
-### Sales Analysis
-
-* Monthly Revenue Trend
-* Month-over-Month Revenue Growth
-* Revenue Contribution by Customer Age Group
-
-### Customer Analysis
-
-* Top Spending Customers
-* Customer Distribution by Age Group
-* Customers with Multiple Purchases
-
-### Product Analysis
-
-* Top Revenue-Generating Products
-* Revenue by Product Category
-* Profit by Product Category
-* Profit Margin by Product Category
-* Highest Profit Products
-* Products Priced Above Average Retail Price
-
-### Geographic Analysis
-
-* Revenue by U.S. State
-* States with Highest Revenue
-* States with Highest Number of Inactive Customers
-
----
-
-## Key Performance Indicators
 
 | Metric              | Value  |
 | ------------------- | ------ |
@@ -115,28 +44,42 @@ Calculated core business metrics:
 | Total Profit        | $5.5M  |
 | Profit Margin       | 52%    |
 
----
+### [Sales Analysis](./sql/sales_analysis.sql)
 
-## Key Dashboard Insights
+* Monthly Revenue Trend
+* Month-over-Month Revenue Growth
+* Revenue Contribution by Customer Age Group
 
-### Customer Insights
+Monthly revenue showed a generally upward trend over time. Month over month (MoM) growth remained relatively stable, with occasional declines but no recurring negative pattern. Customers aged 45 and above contributed the largest share of revenue, accounting for approximately 44% of the total.
 
-* Customers aged **45+** generated the highest revenue among all age groups.
-* Older customer segments represent a significant revenue-driving demographic.
 
-### Sales Performance
+### [Customer Analysis](./sql/customer_analysis.sql)
 
-* Revenue showed consistent month-over-month growth during the analysis period.
+* Customer Distribution by Age Group
+* Customers with Multiple Purchases
+* Repeat Customers
 
-### Product Insights
+Customers aged 45 and above make up the largest segment of the customer base. Approximately 79% of all customers are active users, and around 35% of those active users are repeat customers.
 
-* **Outerwear & Coats** generated the highest revenue among all product categories.
-* **Jeans** emerged as the second-highest revenue-generating category.
-* Product category profit margins remained relatively consistent between **40% and 60%**, indicating balanced profitability across the product portfolio.
 
-### Geographic Insights
+### [Product Analysis](./sql/product_analysis.sql)
 
-* **California** generated the highest revenue among all U.S. states.
+* Revenue by Product Category
+* Profit by Product Category
+* Profit Margin by Product Category
+* Highest Profit Products
+* Products Priced Above Average Retail Price
+
+Profit margins across all product categories remained consistently strong, ranging between 40% and 60%. Among all categories, "Outerwear & Coats" generated the highest revenue.
+
+
+### [Geographic Analysis](./sql/geographic_analysis.sql)
+
+* Revenue by State and Country
+* States with Highest Revenue
+* States with Highest Number of Inactive Customers
+
+China generated the largest share of revenue (33%), followed by the United States (22%) and Brazil (14%). At the regional level, Guangdong (China), England (UK), and California (US) were the top revenue-contributing regions.
 
 ---
 
@@ -145,6 +88,15 @@ Calculated core business metrics:
 **Interactive Dashboard:** [TheLook Ecommerce Analytics Dashboard](https://public.tableau.com/views/Dashboard_17847458891130/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ![Dashboard](./screenshots/dashboard_overview.png)
+
+**Last Updated:** 21 July 2026
+
+---
+## Reccomendations
+
+- Creating targeted campaign for customers aged 45+
+- Investigating lower performing categories
+- Expanding successful marketing strategies from high performing regions to other markets.
 
 ---
 

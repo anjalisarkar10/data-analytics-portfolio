@@ -18,7 +18,8 @@ GROUP BY p.id, p.name
 ORDER BY revenue DESC
 LIMIT 10;
 
--- Q2. -- Find  revenue,profit and profit margin by category
+
+-- Q2. -- Find  revenue, profit and profit margin by category
 
 SELECT
   p.category,
@@ -29,7 +30,8 @@ SELECT
 FROM `bigquery-public-data.thelook_ecommerce.products` AS p
 JOIN `bigquery-public-data.thelook_ecommerce.order_items` AS oi
   ON p.id = oi.product_id
-GROUP BY p.category;
+GROUP BY p.category
+order by revenue desc
 
 -- Q3. Highest Profit Products
 
